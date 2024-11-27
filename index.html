@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD con PostgreSQL</title>
+</head>
+<body>
+    <h1>Gestión de Vendedores</h1>
+    <button onclick="getUsuarios()">Cargar Vendedores</button>
+    <ul id="vendedor"></ul>
+
+    <script>
+        async function getUsuarios() {
+            const response = await fetch('http://localhost:5500/vendedor');
+            const data = await response.json();
+            const lista = document.getElementById('vendedor');
+            lista.innerHTML = '';
+            data.forEach(user => {
+                lista.innerHTML += `<li>${user.id_vendedor} - ${user.nombre} - ${user.telefono}</li>`;
+            });
+        }
+    </script>
+</body>
+</html>
