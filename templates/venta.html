@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Venta</title>
+</head>
+<body>
+    <h1>Registrar Nueva Venta</h1>
+
+    <form id="formVenta">
+        <label for="cliente">Cliente:</label>
+        <select id="cliente" name="cliente" required>
+            <option value="">Seleccione un cliente</option>
+        </select>
+        <br>
+
+        <label for="vendedor">Vendedor:</label>
+        <select id="vendedor" name="vendedor" required>
+            <option value="">Seleccione un vendedor</option>
+        </select>
+        <br>
+
+        <h3>Muebles</h3>
+        <div id="mueblesContainer">
+            <div class="muebleRow">
+                <select class="mueble" name="mueble[]" required></select>
+                <input type="number" name="cantidad[]" placeholder="Cantidad" min="1" required>
+            </div>
+        </div>
+        <button type="button" id="agregarMueble">Agregar Mueble</button>
+        <br>
+
+        <p>Total: $<span id="total">0.00</span></p>
+
+        <input type="hidden" id="fecha" name="fecha" value="">
+
+        <button type="submit">Registrar Venta</button>
+    </form>
+    <h1>Ventas Registradas</h1>
+    
+    <table id="ventasTable" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Vendedor</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Cantidad</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="../scripts/script_venta.js"></script>
+</body>
+</html>

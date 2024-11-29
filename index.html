@@ -3,23 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD con PostgreSQL</title>
+    <link rel="stylesheet" href="styles/style_index.css">
+    <title>Gestión de Registros</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
 </head>
 <body>
-    <h1>Gestión de Vendedores</h1>
-    <button onclick="getUsuarios()">Cargar Vendedores</button>
-    <ul id="vendedor"></ul>
+    <h1>Gestión de Registros</h1>
+    
+    <div>
+        <label for="tabla">Seleccionar tabla:</label>
+        <select id="tabla">
+            <option value="vendedor">Vendedor</option>
+            <option value="cliente">Cliente</option>
+            <option value="proveedor">Proveedor</option>
+            <option value="mueble">Mueble</option>
+        </select>
+    </div>
 
-    <script>
-        async function getUsuarios() {
-            const response = await fetch('http://localhost:5500/vendedor');
-            const data = await response.json();
-            const lista = document.getElementById('vendedor');
-            lista.innerHTML = '';
-            data.forEach(user => {
-                lista.innerHTML += `<li>${user.id_vendedor} - ${user.nombre} - ${user.telefono}</li>`;
-            });
-        }
-    </script>
+    <!-- Mostrar los registros de la tabla seleccionada -->
+    <h2>Registros</h2>
+    <table id="tabla-registros">
+        <thead>
+            <tr></tr> <!-- Cabecera dinámica -->
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Formulario para agregar y modificar registros -->
+    <h2>Agregar/Modificar Registro</h2>
+    <form id="form-registro">
+        <div id="form-container"></div> <!-- Formulario dinámico -->
+        <button type="submit" id="boton-modificar" style="display:none;">Modificar</button> <!-- Botón de modificar -->
+        <button type="submit" id="boton-crear">Crear</button> <!-- Botón de crear -->
+    </form>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Modificar Registro</h2>
+            <form id="form-modificar">
+                <div id="form-modificar-container"></div>
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+    
+    <h2>Eliminar Registro</h2>
+    <select id="eliminar-registro">
+        <option value="">Seleccionar registro</option>
+    </select>
+    <button id="eliminar">Eliminar</button><br>
+
+    <a href="templates/venta.html"><button>Realizar Venta</button></a>
+    <script src="scripts/script_index.js"></script>
 </body>
 </html>
