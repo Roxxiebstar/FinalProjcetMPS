@@ -27,7 +27,7 @@ h1 {
     font-size: 80px;
 }
 
-p, h1, h2, label {
+p, h1, h2, label, h3 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -41,42 +41,7 @@ p, h1, h2, label {
     border-radius: 15px;
 }
 
-#content{
-    background-color: rgb(46, 46, 46);
-}
-
-.modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1; /* Enfrente de otros elementos */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
-}
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-}
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#tabla-registros {
+#resultsTable {
     width: 100%;
     border-collapse: collapse; 
     margin: 20px 0; 
@@ -84,35 +49,35 @@ p, h1, h2, label {
     background-color: rgb(145, 145, 145); 
 }
 
-#tabla-registros thead {
+#resultsTable thead {
     background-color: #aaa; 
     color: white; 
     text-align: left; 
 }
 
 
-#tabla-registros th {
+#resultsTable th {
     padding: 12px 15px; /* Relleno alrededor del texto */
     font-size: 16px; /* Tamaño de la fuente */
 }
 
 /* Estilo para las filas del cuerpo de la tabla */
-#tabla-registros tbody tr {
+#resultsTable tbody tr {
     border-bottom: 1px solid #ddd; /* Línea entre las filas */
 }
 
 /* Estilo para las celdas del cuerpo */
-#tabla-registros td {
+#resultsTable td {
     padding: 10px 15px; /* Relleno de las celdas */
     text-align: left; /* Alineación del texto */
     font-size: 14px; /* Tamaño de la fuente */
 }
 
-#tabla-registros tbody tr:hover {
+#resultsTable tbody tr:hover {
     background-color: #888; /* Fondo más claro cuando se pasa el ratón */
 }
 
-#tabla-registros td:first-child {
+#resultsTable td:first-child {
     font-weight: bold; /* Resaltar la primera columna */
 }
 
@@ -129,13 +94,14 @@ button{
 
 /* Estilo básico para el input */
 input {
-    width: 100%; /* Ancho completo */
+    width: 96%; /* Ancho completo */
     padding: 10px 15px; /* Relleno dentro del campo */
     font-size: 16px; /* Tamaño de la fuente */
     border: 2px solid #ccc; /* Borde gris claro */
     border-radius: 8px; /* Bordes redondeados */
     background-color: #f9f9f9; /* Fondo claro */
-    transition: all 0.3s ease; /* Transición suave en cambios de estado */
+    transition: all 0.3s ease;
+    margin: 5px; /* Transición suave en cambios de estado */
 }
 
 /* Estilo al pasar el mouse sobre el input */
@@ -169,7 +135,8 @@ select {
     -webkit-appearance: none; /* Para navegadores webkit */
     -moz-appearance: none;
     cursor: pointer; 
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
+    margin: 5px; 
 }
 
 /* Estilo cuando el select tiene el foco */
