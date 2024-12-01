@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style_mueble.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Muebles Registro</title>
+</head>
+<body>
+    <main>
+        <h2>Registrar Mueble</h2>
+            <form id="formMueble">
+                    <label for="precio">Precio: </label>
+                    <input type="number" name="precio" id="precio" required>
+
+                    <label for="altura">Altura: </label>
+                    <input type="number" name="altura" id="altura" required>
+
+                    <label for="ancho">Ancho: </label>
+                    <input type="number" name="ancho" id="ancho" required>
+
+                    <label for="profundidad">profundidad: </label>
+                    <input type="number" name="profundidad" id="profundidad" required>
+
+                    <label for="color">Color:</label>
+                    <select id="color" name="color" required>
+                        <option value="">Seleccione un Color</option>
+                    </select>
+                    <br>
+
+                    <label for="material">Material:</label>
+                    <select id="material" name="material" required>
+                        <option value="">Seleccione un material</option>
+                    </select>
+                    <br>
+
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Seleccione un tipo</option>
+                    </select>
+                    <br>
+                    <button type="submit">Agregar Material</button>
+            </form>
+        <h1>Muebles Registrados</h1>
+        <div id="table">
+            <table id="muebleTable" border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Precio</th>
+                        <th>Dimensiones</th>
+                        <th>Color</th>
+                        <th>Material</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Eliminar Registro</h2>
+        <div id="delete">
+            <select id="eliminar-registro">
+                <option value="">Seleccionar registro</option>
+            </select>
+            <button id="eliminar">Eliminar</button><br>
+        </div>
+
+    </main>
+    <script src="../scripts/script_mueble.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+body{
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+main{
+    margin: 10px;
+    padding: 10px;
+    width: 1000px;
+    height: fit-content;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button{
+    margin: 8px;
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    padding: 2px;
+    color: white;
+    background-color: rgb(58, 58, 58);
+    border: none;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+input {
+    width: 96%; /* Ancho completo */
+    padding: 10px 15px; /* Relleno dentro del campo */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: 2px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro */
+    transition: all 0.3s ease;
+    margin: 5px; /* Transición suave en cambios de estado */
+}
+
+/* Estilo al pasar el mouse sobre el input */
+input:hover {
+    border-color: #888; /* Borde verde cuando el cursor pasa por encima */
+    background-color: #e9f7e9; /* Fondo claro cuando se pasa el mouse */
+}
+
+/* Estilo cuando el campo tiene el foco */
+input:focus {
+    outline: none; /* Elimina el contorno predeterminado */
+    border-color: #888; /* Borde verde al tener el foco */
+    background-color: #fff; /* Fondo blanco al tener el foco */
+}
+
+/* Estilo para el texto del placeholder */
+input::placeholder {
+    color: #888; /* Color del texto del placeholder */
+    font-style: italic; /* Estilo itálico para el placeholder */
+}
+
+#muebleTable {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 20px 0; 
+    font-family: Arial, sans-serif;
+    background-color: rgb(145, 145, 145); 
+}
+
+#muebleTable thead {
+    background-color: #aaa; 
+    color: white; 
+    text-align: left; 
+}
+
+
+#muebleTable th {
+    padding: 12px 15px; /* Relleno alrededor del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo para las filas del cuerpo de la tabla */
+#muebleTable tbody tr {
+    border-bottom: 1px solid #ddd; /* Línea entre las filas */
+}
+
+/* Estilo para las celdas del cuerpo */
+#muebleTable td {
+    padding: 10px 15px; /* Relleno de las celdas */
+    text-align: left; /* Alineación del texto */
+    font-size: 14px; /* Tamaño de la fuente */
+}
+
+#muebleTable tbody tr:hover {
+    background-color: #888; /* Fondo más claro cuando se pasa el ratón */
+}
+
+#muebleTable td:first-child {
+    font-weight: bold; /* Resaltar la primera columna */
+}
+
+#table, #delete, #form, #select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(83, 83, 83);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+select {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+    appearance: none; 
+    -webkit-appearance: none; /* Para navegadores webkit */
+    -moz-appearance: none;
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    margin: 5px; 
+}
+
+/* Estilo cuando el select tiene el foco */
+select:focus {
+    outline: none; 
+    border-color: #888; 
+    background-color: #fff;
+}
+
+/* Estilo al pasar el mouse sobre el select */
+select:hover {
+    border-color: #888; /* Borde verde cuando el cursor pasa por encima */
+    background-color: #e9f7e9; /* Fondo claro cuando se pasa el mouse */
+}
+
+/* Estilo para la flecha personalizada */
+select::-ms-expand {
+    display: none; /* Oculta la flecha en IE */
+}
+
+/* Estilo para los options */
+select option {
+    padding: 10px;
+    font-size: 16px; 
+    background-color: #fff;
+}
+
+/* Estilo para las opciones cuando se seleccionan */
+select option:checked {
+    background-color: #888; /* Fondo verde cuando la opción está seleccionada */
+    color: white; /* Texto blanco cuando la opción está seleccionada */
+}

@@ -130,7 +130,7 @@ async function cargarVentas() {
             row.insertCell(3).textContent = venta.fecha;
             row.insertCell(4).textContent = venta.total;
             row.insertCell(5).textContent = venta.cantidad;
-            row.insertCell(6).textContent = venta.tipo;
+            row.insertCell(6).textContent = venta.mueble;
         });
     } catch (error) {
         console.error(error);

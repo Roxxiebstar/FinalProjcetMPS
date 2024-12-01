@@ -12,11 +12,11 @@ const getMueble = async (req, res) => {
 };
 
 const addMueble = async (req, res) => {
-    const { precio, dimensiones, color, material, tipo } = req.body;
+    const { precio, altura, ancho, profundidad, color, material, tipo } = req.body;
     try {
         const result = await pool.query(
-            'INSERT INTO Mueble (precio, dimensiones, id_color, id_material, id_tipo) VALUES ($1, $2, $3, $4, $5) RETURNING *',
-            [precio, dimensiones, color, material, tipo]
+            'INSERT INTO Mueble (precio, altura, ancho, profundidad, id_color, id_material, id_tipo) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
+            [precio, altura, ancho, profundidad, color, material, tipo]
         );
         res.status(201).json(result.rows[0]);
     } catch (err) {
@@ -44,6 +44,7 @@ const updateMueble = async (req, res) => {
 const deleteMueble = async (req, res) => {
     const { id } = req.params;
     try {
+		await pool.query('DELETE FROM mueble_proveedor WHERE id_mueble = $1', [id]);
         await pool.query('DELETE FROM mueble WHERE id_mueble = $1', [id]);
         res.status(200).json({ message: 'Mueble eliminado exitosamente' });
     } catch (err) {

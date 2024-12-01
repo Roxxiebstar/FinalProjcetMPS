@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cabecera.forEach(campo => {
             data[campo] = formContainer.querySelector(`[name=${campo}]`).value;
         });
-
+		
         try {
                 await axios.post(`http://localhost:5500/${tabla}`, data);
                 alert("Registro creado");
