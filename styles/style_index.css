@@ -56,15 +56,15 @@ p, h1, h2, label {
     background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
 }
 .modal-content {
-    background-color: #fefefe;
+    background-color: #aaa;
     margin: 15% auto;
-    padding: 20px;
+    padding: 50px;
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
 }
 .close {
-    color: #aaa;
+    color: #888;
     float: right;
     font-size: 28px;
     font-weight: bold;
